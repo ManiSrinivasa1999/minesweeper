@@ -1,57 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Minesweeper by Manisrinivasa</title>
-</head>
-<body class="has-navbar-fixed-top">
-  <!-- 3 Views 
-    start screen,Game screen,end screen -->
-  <nav class="navbar is-link is-fixed-top">
-    <div class="navbar-menu"> 
-      <div class="navbar-start">
-
-      </div>     
-      <h1 class="is-size-1">
-        Minesweeper Game
-      </h1>
-      <div class="navbar-end">
-
-      </div>      
-    </div>
-  </nav>
-  <section class="hero is-link is-fullheight-with-navbar">
-    <div class="hero-body">
-      <div class="container">
-        <p class="title">
-          <div class="columns">
-            <div class="column is-one-third">
-
-            </div>
-            <div class="column is-one-third">
-              <div class="column">
-                <img src="assets/images/image1.png" alt="MinesweeperImage">
-              </div>
-              <div class="column buttons">
-                <button class="button is-success is-medium">Play Now</button>    
-              </div>          
-            </div>
-            <div class="column is-one-third">
-
-            </div>
-          </div>          
-        </p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link rel="shortcut icon" href="assets/images/favicomatic/favicon.ico" type="image/x-icon">    
+    <title>Minesweeper by Manisrinivasa</title>
+  </head>
+  <body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top">
+      <a class="navbar-item is-size-1" href="/">
+        <h2 class="has-text-link">Minesweeper Game</h2>
+      </a>           
+    </nav>
+    <section class="hero is-link is-fullheight-with-navbar is-tablet" id="startView">
+      <div class="hero-body">
+        <div class="container">
+          <figure class="">
+            <img src="assets/images/displayimage.png" height="550px" width="550px" alt="Minesweeper">           
+          </figure>
+          <a class="button is-large is-primary" id="playnow">
+            Play Now!            
+          </a>          
+        </div>
       </div>
-    </div>
-  </section>
-  <footer class="footer">
-    
-  </footer>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</body>
+    </section>
+    <section class="hero is-danger is-fullheight is-tablet hide" id="difficultyView">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="is-size-2">Select the difficulty level to play</h2>
+          <div class="difficultylevel">    
+            <label class="radio has-text-black is-size-3 levels" row="1"> <!--difflevel  id difficultylevel-->
+              <input type="radio" name="level"  id="1" value="9" checked>
+              9x9
+            </label>
+            <label class="radio has-text-black is-size-3 levels" row="2">
+              <input type="radio" name="level"  id="2" value="12">
+              12x12
+            </label>          
+            <label class="radio has-text-black is-size-3 levels" row="3">
+              <input type="radio" name="level" id="3" value="15">
+              15x15
+            </label>            
+          </div>
+          <a class="button is-large is-link" id="playbutton">
+            <span>Play</span>    
+            <span class="icon is-medium">
+              <i class="fas fa-play-circle"></i>
+            </span>                     
+          </a>          
+        </div>
+      </div>
+    </section>
+    <section class="hero is-link is-fullheight-with-navbar gridshide" id="gameView">
+      <div class="hero-body">
+        <div class="container" id="displaygrids">
+          
+        </div>
+      </div>
+    </section>
+    <footer class="footer" id="footer">
+      <div class="content has-text-centered">
+        
+      </div>    
+    </footer>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </body>
 </html>
+
+
